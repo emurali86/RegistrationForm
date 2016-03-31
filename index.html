@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Registration Form</title>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+function essentials_of_validation(form1)
+{
+ var return_value=true;
+ var username1=form1.txtusername1.value;
+ var username2=form1.txtusername2.value;
+ var password1=form1.txtpassword1.value;
+ var password2=form1.txtpassword2.value;
+ if(username1.length < 8)
+  {
+  return_value=false;
+  window.alert("user name less than 8 chars");
+  }
+if(username1==username2)
+ {
+  return_value=false;
+  window.alert("both ids are same");
+  form1.txtusername2.value="";
+ }
+ if(password1.length<6)
+ {
+  return_value=false;
+  window.alert(" pwd should be > 6 char's ");
+  form1.txtpassword1.value="";
+  form1.txtpassword2.value="";
+ }
+if(password1!=password2)
+{
+ return_ value=false;
+ window.alert("ur password mismatched ");
+ form1.txtpassword1.value="";
+ form1.txtpassword2.value="";
+}
+      return return_value;
+}
+</script>
+</head>
+<body BGCOLOR="aqua">
+<CENTER><u>
+<font name="mistral" size="+1"><h2>REGISTRATION FORM</h2></font>
+</u></center>
+<form name="form1"  onSubmit="essentials_of_validation(this)">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;<input   name="name" type="text"  size="20">
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="3">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sex:&nbsp;&nbsp;&nbsp;&nbsp;<input name ="gen" type="radio" value="male">male
+<input name="gen" type="radio" value="female">female
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:
+&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="address" rows="2" cols="20"></textarea>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter e-mail id u want :&nbsp;&nbsp;&nbsp;&nbsp;<sup>*</sup>
+<input  type="text"  name="txtusername1"  size="15">
+<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password:<sup>*</sup>
+&nbsp;&nbsp;&nbsp;&nbsp;<input   type="Password"  name="txtpassword1" size="15">(password should exceed 6 characters)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm password:<input type="password" name="txtpassword2" size=20>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alternate mail:<sup>*</sup>
+<input  type="text"  name="txtusername2"  size="15">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Known This Site Through
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="things" type="checkbox" value="srts"> internet
+<input name="things" type="checkbox" value="sp">newspapers
+<input name="things" type="checkbox" value="spor"> friends
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rate ur site
+<select  name="rating">
+<option selected>good
+<option>average
+<option>bad
+<option>no rating
+</select><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enter the code<input name="code" type="text" size="5">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table  border="1" width="10%" height="10%">
+<thead><tr><th>
+1123</th></tr>
+</thead>
+</table>
+<br>
+<a href="https://www.sbi.co.in/"><input type="button"value="submit"></a>
+</form>
+</body>
+</html>
